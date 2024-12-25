@@ -91,6 +91,14 @@ def page3(root):
                        bg = "lightgrey", command=deleate)
     deleatebtn.place(relx=0.85, rely=0.6, anchor=CENTER)
 
+    def toReport():
+        changepage(2)
+
+
+    toreportbtn = Button(root, text = "back" ,
+                       bg = "lightgrey", command=toReport)
+    toreportbtn.place(relx=0.15, rely=0.2, anchor=CENTER)
+
 def page2(root):
     global admin
     global user
@@ -150,6 +158,16 @@ def page2(root):
                        bg = "lightgreen", command=send)
     reportbtn.grid(column=2, row=0)
     reportbtn.place(relx=0.5, rely=0.6, anchor=CENTER)
+
+    def toStart():
+        changepage(1)
+
+
+    tostartbtn = Button(root, text = "back" ,
+                       bg = "lightgrey", command=toStart)
+    tostartbtn.grid(column=2, row=0)
+    tostartbtn.place(relx=0.15, rely=0.2, anchor=CENTER)
+
 
     if user[2] == admin:
         adminbtn = Button(root, text = "mange reports" ,
